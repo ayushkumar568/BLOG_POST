@@ -1,0 +1,15 @@
+{
+    "port": 3100,
+    "db": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "password": "password",
+        "database": "blogPost"
+    },
+    "crypto": {
+        "CRYPTO_KEY": "e3830508486a6895e2a9be38ddd035d9",
+        "CRYPTO_IV": "c1e3a669163ded3d",
+        "CRYPTO_ALG": "aes-256-cbc"
+    },
+    "secretKey": "blogSecret"
+}
