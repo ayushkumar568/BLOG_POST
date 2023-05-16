@@ -37,7 +37,7 @@ async function update(req, res) {
         if (file)
             set += `imageAndThumbnail = '${file.path}', `;
         set += `updatedBy = ${userId}, updatedAt = '${formatDate}' `
-        const where = `WHERE id = ${data.id};and userId = ${userId}`
+        const where = `WHERE id = ${data.id} and userId = ${userId}`
         updateQuery = updateQuery + set + where
         await connectDatabase(updateQuery)
         return res.status(200).send({ message: "update Successfully" })
