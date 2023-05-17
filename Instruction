@@ -18,3 +18,9 @@ For database
 - Go to server option and select Data Import.
 - Choose Import from Self-Contained File and select dump.sql path.
 - Hit the Start Import button below.
+
+For postman collection
+- Find BlogPost.postman_collection.json file in the directory.
+- Open postman and select Import option.
+- choose file option and upload BlogPost.postman_collection.json file.
+- Hit the Import buton.
