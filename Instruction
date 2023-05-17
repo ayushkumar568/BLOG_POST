@@ -1,0 +1,14 @@
+From Git link
+- Git needed to be installed in system.
+- Go to particular directory where you want to setup this project.
+- Follow terminal command.
+1. git clone https://github.com/ayushkumar568/BLOG_POST
+2. npm install
+3. npm start
+
+From zip file
+- Go to particular directory where you want to setup this project.
+- Follow terminal command.
+1. npm install
+2. npm start
+
