@@ -12,3 +12,9 @@ From zip file
 1. npm install
 2. npm start
 
+For database
+- Find dump.sql file in the directory.
+- Go to workbench and select any databse where you want that schema get installed.
+- Go to server option and select Data Import.
+- Choose Import from Self-Contained File and select dump.sql path.
+- Hit the Start Import button below.
