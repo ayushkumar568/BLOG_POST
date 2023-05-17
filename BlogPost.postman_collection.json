@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "523fed45-6682-4f4c-968f-b8aaf5d3ce75",
+		"name": "BlogPost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3100/blog/ping",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\":\"Ayush\",\n    \"lastname\":\"Kumar\",\n    \"username\":\"ayushkumar568@gmail.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/blog/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsInVzZXJuYW1lIjoiYWsxMjNAZ21haWwuY29tIiwiZmlyc3RuYW1lIjoidGVzdCIsImxhc3RuYW1lIjoibGFzdG5hbWUiLCJpYXQiOjE2ODQyMjI4ODEsImV4cCI6MTY4NDIyNjQ4MX0.OPBZRn2zumq44ect2tfVs9fnOBgz_UjsghgOgwYH-3c",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "tes3",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "this is description",
+							"type": "default"
+						},
+						{
+							"key": "imageAndThumbnail",
+							"type": "file",
+							"src": "/home/ayush/Downloads/flowerImage.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/blog/save",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiYXl1c2hrdW1hcjU2OEBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJBeXVzaCIsImxhc3RuYW1lIjoiS3VtYXIiLCJpYXQiOjE2ODQyMjk2NzgsImV4cCI6MTY4NDIzMzI3OH0.H_hST7G-w34Y1X-vmxQ9L7l0DJCwGNQ8cF7wikn2bSU",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": " nature",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "desc",
+							"type": "default"
+						},
+						{
+							"key": "imageAndThumbnail",
+							"type": "file",
+							"src": "/home/ayush/Downloads/1633199491-1633199490440.avif"
+						},
+						{
+							"key": "id",
+							"value": "4",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/blog/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiYXl1c2hrdW1hcjU2OEBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJBeXVzaCIsImxhc3RuYW1lIjoiS3VtYXIiLCJpYXQiOjE2ODQyMjk2NzgsImV4cCI6MTY4NDIzMzI3OH0.H_hST7G-w34Y1X-vmxQ9L7l0DJCwGNQ8cF7wikn2bSU",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/blog/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Active Inactive post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiYXl1c2hrdW1hcjU2OEBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJBeXVzaCIsImxhc3RuYW1lIjoiS3VtYXIiLCJpYXQiOjE2ODQyMjk2NzgsImV4cCI6MTY4NDIzMzI3OH0.H_hST7G-w34Y1X-vmxQ9L7l0DJCwGNQ8cF7wikn2bSU",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/blog/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "blog list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiYXl1c2hrdW1hcjU2OEBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJBeXVzaCIsImxhc3RuYW1lIjoiS3VtYXIiLCJpYXQiOjE2ODQyMzMzMTksImV4cCI6MTY4NDIzNjkxOX0.tqXycnI2gh_-c_2V-PHjgf0lz--SdC2XpIR_53jz37Y",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3100/blog/blogList",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"blogList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "blogDetail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiYXl1c2hrdW1hcjU2OEBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJBeXVzaCIsImxhc3RuYW1lIjoiS3VtYXIiLCJpYXQiOjE2ODQyMzMzMTksImV4cCI6MTY4NDIzNjkxOX0.tqXycnI2gh_-c_2V-PHjgf0lz--SdC2XpIR_53jz37Y",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3100/blog/blogList",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"blogList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"ayushkumar568@gmail.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/blog/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"blog",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
